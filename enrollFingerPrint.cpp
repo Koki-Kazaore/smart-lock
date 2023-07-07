@@ -1,3 +1,9 @@
+/*
+It is a program to register a fingerprint to a microcomputer.
+After uploading to the microcomputer, check the output using the serial monitor.
+Follow the instructions displayed on the serial monitor to proceed with fingerprint registration.
+*/
+
 #include <Adafruit_Fingerprint.h>
 #include <HardwareSerial.h>
 #include <SoftwareSerial.h>
