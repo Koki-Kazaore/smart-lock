@@ -1,3 +1,8 @@
+/*
+A program that determines whether the fingerprint is registered by enrollFingerPrint.
+In order to the judgment result explicit, if it is a registered fingerprint, the LED will light up.
+*/
+
 #include <Adafruit_Fingerprint.h>
 #include <SoftwareSerial.h>
 
