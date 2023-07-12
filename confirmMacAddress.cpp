@@ -7,8 +7,8 @@ void setup(void) {
   Serial.println("\r\n-----------------------------");
  
   uint64_t chipid;
-  chipid=ESP.getEfuseMac();//The chip ID is essentially its MAC address(length: 6 bytes).
-  Serial.printf("ESP32 Chip ID = %04X\r\n",(uint16_t)(chipid>>32));//print High 2 bytes
+  chipid=ESP.getEfuseMac();// The chip ID is essentially its MAC address(length: 6 bytes).
+  Serial.printf("ESP32 Chip ID = %04X\r\n",(uint16_t)(chipid>>32));// print High 2 bytes
  
   Serial.printf("Chip Revision %d\r\n", ESP.getChipRevision());
   esp_chip_info_t chip_info;
@@ -18,11 +18,11 @@ void setup(void) {
   Serial.printf("Flash Chip Size = %d byte\r\n", ESP.getFlashChipSize());
   Serial.printf("Flash Frequency = %d Hz\r\n", ESP.getFlashChipSpeed());
   Serial.printf("ESP-IDF version = %s\r\n", esp_get_idf_version());
-  //利用可能なヒープのサイズを取得
+  // get available heap size
   Serial.printf("Available Heap Size= %d\r\n", esp_get_free_heap_size());
-  //利用可能な内部ヒープのサイズを取得
+  // get size of available internal heap
   Serial.printf("Available Internal Heap Size = %d\r\n", esp_get_free_internal_heap_size());
-  //これまでに利用可能だった最小ヒープを取得します
+  // get the smallest heap ever available
   Serial.printf("Minimum Free Heap Ever Available Size = %d\r\n", esp_get_minimum_free_heap_size());
   Serial.println();
  
