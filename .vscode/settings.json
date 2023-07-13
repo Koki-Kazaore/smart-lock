@@ -1,0 +1,7 @@
+{
+    "terminal.integrated.commandsToSkipShell": [
+        "git.branch",
+        "git.checkout"
+    ],
+    "terminal.integrated.enableFileLinkProviders": true
+}
