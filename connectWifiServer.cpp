@@ -65,6 +65,7 @@ void loop(){
     while (client.connected()) {            // loop while the client's connected
       if (client.available()) {             // if there's bytes to read from the client,
         char c = client.read();             // read a byte, then
+        // Since c is binary data, use Serial.write() instead of Serial.print() to write to the monitor.
         Serial.write(c);                    // print it out the serial monitor
         if (c == '\n') {                    // if the byte is a newline character
 
